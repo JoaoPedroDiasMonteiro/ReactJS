@@ -8,7 +8,7 @@
     padding: 20px;
     margin: 10px;
     background-color: white;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .product-list article p {
@@ -23,4 +23,40 @@
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 14px;
+}
+
+/* actions */
+
+.product-list .actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.product-list .actions button {
+    background-color: #ff5025;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.product-list .actions  button:hover {
+    color: #ff5025;
+    background-color: white;
+    transition: all .3s;
+}
+
+.product-list .actions button[disabled] {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.product-list .actions button[disabled]:hover {
+    background-color: #ff5025;
+    color: white;
 }
