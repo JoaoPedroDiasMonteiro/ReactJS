@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import api from '../../services/api'
+import { Link } from 'react-router-dom'
 
 import './style.css'
 
@@ -25,7 +26,7 @@ export default class Main extends Component {
     prevPage = () => {
         const { page } = this.state
 
-        if (page === 1) return 
+        if (page === 1) return
 
         const pageNumber = page - 1
 
@@ -40,19 +41,19 @@ export default class Main extends Component {
 
         const pageNumber = page + 1
 
-        this.loadProducts(pageNumber)   
+        this.loadProducts(pageNumber)
     }
 
     render() {
         const { products, page, productInfo } = this.state
-        
+
         return (
             <div className='product-list'>
                 {products.map(product => (
                     <article key={product._id}>
                         <strong>{product.title}</strong>
                         <p>{product.description}</p>
-                        <a href=" ">Acessar</a>
+                        <Link to={`/products/${product._id}`}>Acessar</Link>
                     </article>
                 ))}
                 <div className="actions">
